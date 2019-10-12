@@ -33,6 +33,6 @@
         "psr-4": { "daxslab\\enzona\\payment\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "daxslab\\enzona\\payment\\" : "test/" }
+        "psr-4": { "daxslab\\enzona\\payment\\test\\" : "test/" }
     }
 }
