@@ -239,21 +239,21 @@ class ItemsOperations implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getDescriptionAllowableValues();
-        if (!is_null($this->container['description']) && !in_array($this->container['description'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'description', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getNameAllowableValues();
-        if (!is_null($this->container['name']) && !in_array($this->container['name'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'name', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
+//        $allowedValues = $this->getDescriptionAllowableValues();
+//        if (!is_null($this->container['description']) && !in_array($this->container['description'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'description', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getNameAllowableValues();
+//        if (!is_null($this->container['name']) && !in_array($this->container['name'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'name', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
 
         return $invalidProperties;
     }
@@ -290,14 +290,14 @@ class ItemsOperations implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $allowedValues = $this->getDescriptionAllowableValues();
-        if (!is_null($description) && !in_array($description, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'description', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($description) && !in_array($description, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'description', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['description'] = $description;
 
         return $this;
@@ -395,14 +395,14 @@ class ItemsOperations implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $allowedValues = $this->getNameAllowableValues();
-        if (!is_null($name) && !in_array($name, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'name', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($name) && !in_array($name, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'name', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['name'] = $name;
 
         return $this;

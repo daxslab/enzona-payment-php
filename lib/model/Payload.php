@@ -323,53 +323,53 @@ class Payload implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getCurrencyAllowableValues();
-        if (!is_null($this->container['currency']) && !in_array($this->container['currency'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'currency', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getMerchantOpIdAllowableValues();
-        if (!is_null($this->container['merchant_op_id']) && !in_array($this->container['merchant_op_id'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'merchant_op_id', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getInvoiceNumberAllowableValues();
-        if (!is_null($this->container['invoice_number']) && !in_array($this->container['invoice_number'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'invoice_number', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getReturnUrlAllowableValues();
-        if (!is_null($this->container['return_url']) && !in_array($this->container['return_url'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'return_url', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getCancelUrlAllowableValues();
-        if (!is_null($this->container['cancel_url']) && !in_array($this->container['cancel_url'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'cancel_url', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getTerminalIdAllowableValues();
-        if (!is_null($this->container['terminal_id']) && !in_array($this->container['terminal_id'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'terminal_id', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
+//        $allowedValues = $this->getCurrencyAllowableValues();
+//        if (!is_null($this->container['currency']) && !in_array($this->container['currency'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'currency', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getMerchantOpIdAllowableValues();
+//        if (!is_null($this->container['merchant_op_id']) && !in_array($this->container['merchant_op_id'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'merchant_op_id', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getInvoiceNumberAllowableValues();
+//        if (!is_null($this->container['invoice_number']) && !in_array($this->container['invoice_number'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'invoice_number', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getReturnUrlAllowableValues();
+//        if (!is_null($this->container['return_url']) && !in_array($this->container['return_url'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'return_url', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getCancelUrlAllowableValues();
+//        if (!is_null($this->container['cancel_url']) && !in_array($this->container['cancel_url'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'cancel_url', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getTerminalIdAllowableValues();
+//        if (!is_null($this->container['terminal_id']) && !in_array($this->container['terminal_id'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'terminal_id', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
 
         return $invalidProperties;
     }
@@ -430,14 +430,14 @@ class Payload implements ModelInterface, ArrayAccess
     public function setCurrency($currency)
     {
         $allowedValues = $this->getCurrencyAllowableValues();
-        if (!is_null($currency) && !in_array($currency, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'currency', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($currency) && !in_array($currency, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'currency', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['currency'] = $currency;
 
         return $this;
@@ -511,14 +511,14 @@ class Payload implements ModelInterface, ArrayAccess
     public function setMerchantOpId($merchant_op_id)
     {
         $allowedValues = $this->getMerchantOpIdAllowableValues();
-        if (!is_null($merchant_op_id) && !in_array($merchant_op_id, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'merchant_op_id', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($merchant_op_id) && !in_array($merchant_op_id, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'merchant_op_id', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['merchant_op_id'] = $merchant_op_id;
 
         return $this;
@@ -544,14 +544,14 @@ class Payload implements ModelInterface, ArrayAccess
     public function setInvoiceNumber($invoice_number)
     {
         $allowedValues = $this->getInvoiceNumberAllowableValues();
-        if (!is_null($invoice_number) && !in_array($invoice_number, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'invoice_number', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($invoice_number) && !in_array($invoice_number, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'invoice_number', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['invoice_number'] = $invoice_number;
 
         return $this;
@@ -577,14 +577,14 @@ class Payload implements ModelInterface, ArrayAccess
     public function setReturnUrl($return_url)
     {
         $allowedValues = $this->getReturnUrlAllowableValues();
-        if (!is_null($return_url) && !in_array($return_url, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'return_url', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($return_url) && !in_array($return_url, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'return_url', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['return_url'] = $return_url;
 
         return $this;
@@ -610,14 +610,14 @@ class Payload implements ModelInterface, ArrayAccess
     public function setCancelUrl($cancel_url)
     {
         $allowedValues = $this->getCancelUrlAllowableValues();
-        if (!is_null($cancel_url) && !in_array($cancel_url, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'cancel_url', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($cancel_url) && !in_array($cancel_url, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'cancel_url', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['cancel_url'] = $cancel_url;
 
         return $this;
@@ -643,14 +643,14 @@ class Payload implements ModelInterface, ArrayAccess
     public function setTerminalId($terminal_id)
     {
         $allowedValues = $this->getTerminalIdAllowableValues();
-        if (!is_null($terminal_id) && !in_array($terminal_id, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'terminal_id', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($terminal_id) && !in_array($terminal_id, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'terminal_id', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['terminal_id'] = $terminal_id;
 
         return $this;

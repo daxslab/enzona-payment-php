@@ -328,45 +328,45 @@ class PaymentFullOperations implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getTransactionUuidAllowableValues();
-        if (!is_null($this->container['transaction_uuid']) && !in_array($this->container['transaction_uuid'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'transaction_uuid', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getCurrencyAllowableValues();
-        if (!is_null($this->container['currency']) && !in_array($this->container['currency'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'currency', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getStatusDenomAllowableValues();
-        if (!is_null($this->container['status_denom']) && !in_array($this->container['status_denom'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'status_denom', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getDescriptionAllowableValues();
-        if (!is_null($this->container['description']) && !in_array($this->container['description'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'description', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getMerchantOpIdAllowableValues();
-        if (!is_null($this->container['merchant_op_id']) && !in_array($this->container['merchant_op_id'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'merchant_op_id', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
+//        $allowedValues = $this->getTransactionUuidAllowableValues();
+//        if (!is_null($this->container['transaction_uuid']) && !in_array($this->container['transaction_uuid'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'transaction_uuid', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getCurrencyAllowableValues();
+//        if (!is_null($this->container['currency']) && !in_array($this->container['currency'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'currency', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getStatusDenomAllowableValues();
+//        if (!is_null($this->container['status_denom']) && !in_array($this->container['status_denom'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'status_denom', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getDescriptionAllowableValues();
+//        if (!is_null($this->container['description']) && !in_array($this->container['description'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'description', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getMerchantOpIdAllowableValues();
+//        if (!is_null($this->container['merchant_op_id']) && !in_array($this->container['merchant_op_id'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'merchant_op_id', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
 
         return $invalidProperties;
     }
@@ -403,14 +403,14 @@ class PaymentFullOperations implements ModelInterface, ArrayAccess
     public function setTransactionUuid($transaction_uuid)
     {
         $allowedValues = $this->getTransactionUuidAllowableValues();
-        if (!is_null($transaction_uuid) && !in_array($transaction_uuid, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'transaction_uuid', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($transaction_uuid) && !in_array($transaction_uuid, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'transaction_uuid', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['transaction_uuid'] = $transaction_uuid;
 
         return $this;
@@ -436,14 +436,14 @@ class PaymentFullOperations implements ModelInterface, ArrayAccess
     public function setCurrency($currency)
     {
         $allowedValues = $this->getCurrencyAllowableValues();
-        if (!is_null($currency) && !in_array($currency, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'currency', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($currency) && !in_array($currency, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'currency', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['currency'] = $currency;
 
         return $this;
@@ -541,14 +541,14 @@ class PaymentFullOperations implements ModelInterface, ArrayAccess
     public function setStatusDenom($status_denom)
     {
         $allowedValues = $this->getStatusDenomAllowableValues();
-        if (!is_null($status_denom) && !in_array($status_denom, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'status_denom', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($status_denom) && !in_array($status_denom, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'status_denom', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['status_denom'] = $status_denom;
 
         return $this;
@@ -574,14 +574,14 @@ class PaymentFullOperations implements ModelInterface, ArrayAccess
     public function setDescription($description)
     {
         $allowedValues = $this->getDescriptionAllowableValues();
-        if (!is_null($description) && !in_array($description, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'description', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($description) && !in_array($description, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'description', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['description'] = $description;
 
         return $this;
@@ -631,14 +631,14 @@ class PaymentFullOperations implements ModelInterface, ArrayAccess
     public function setMerchantOpId($merchant_op_id)
     {
         $allowedValues = $this->getMerchantOpIdAllowableValues();
-        if (!is_null($merchant_op_id) && !in_array($merchant_op_id, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'merchant_op_id', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($merchant_op_id) && !in_array($merchant_op_id, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'merchant_op_id', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['merchant_op_id'] = $merchant_op_id;
 
         return $this;

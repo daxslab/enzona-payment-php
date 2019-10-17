@@ -408,77 +408,77 @@ class PaymentRefundOperations implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getCurrencyAllowableValues();
-        if (!is_null($this->container['currency']) && !in_array($this->container['currency'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'currency', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getTransactionDenomAllowableValues();
-        if (!is_null($this->container['transaction_denom']) && !in_array($this->container['transaction_denom'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'transaction_denom', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getTransactionCodeAllowableValues();
-        if (!is_null($this->container['transaction_code']) && !in_array($this->container['transaction_code'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'transaction_code', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getTerminalIdAllowableValues();
-        if (!is_null($this->container['terminal_id']) && !in_array($this->container['terminal_id'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'terminal_id', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getInvoiceNumberAllowableValues();
-        if (!is_null($this->container['invoice_number']) && !in_array($this->container['invoice_number'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'invoice_number', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getUsernameAllowableValues();
-        if (!is_null($this->container['username']) && !in_array($this->container['username'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'username', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getNameAllowableValues();
-        if (!is_null($this->container['name']) && !in_array($this->container['name'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'name', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getLastnameAllowableValues();
-        if (!is_null($this->container['lastname']) && !in_array($this->container['lastname'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'lastname', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getAvatarAllowableValues();
-        if (!is_null($this->container['avatar']) && !in_array($this->container['avatar'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'avatar', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
+//        $allowedValues = $this->getCurrencyAllowableValues();
+//        if (!is_null($this->container['currency']) && !in_array($this->container['currency'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'currency', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getTransactionDenomAllowableValues();
+//        if (!is_null($this->container['transaction_denom']) && !in_array($this->container['transaction_denom'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'transaction_denom', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getTransactionCodeAllowableValues();
+//        if (!is_null($this->container['transaction_code']) && !in_array($this->container['transaction_code'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'transaction_code', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getTerminalIdAllowableValues();
+//        if (!is_null($this->container['terminal_id']) && !in_array($this->container['terminal_id'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'terminal_id', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getInvoiceNumberAllowableValues();
+//        if (!is_null($this->container['invoice_number']) && !in_array($this->container['invoice_number'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'invoice_number', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getUsernameAllowableValues();
+//        if (!is_null($this->container['username']) && !in_array($this->container['username'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'username', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getNameAllowableValues();
+//        if (!is_null($this->container['name']) && !in_array($this->container['name'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'name', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getLastnameAllowableValues();
+//        if (!is_null($this->container['lastname']) && !in_array($this->container['lastname'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'lastname', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getAvatarAllowableValues();
+//        if (!is_null($this->container['avatar']) && !in_array($this->container['avatar'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'avatar', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
 
         return $invalidProperties;
     }
@@ -683,14 +683,14 @@ class PaymentRefundOperations implements ModelInterface, ArrayAccess
     public function setCurrency($currency)
     {
         $allowedValues = $this->getCurrencyAllowableValues();
-        if (!is_null($currency) && !in_array($currency, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'currency', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($currency) && !in_array($currency, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'currency', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['currency'] = $currency;
 
         return $this;
@@ -740,14 +740,14 @@ class PaymentRefundOperations implements ModelInterface, ArrayAccess
     public function setTransactionDenom($transaction_denom)
     {
         $allowedValues = $this->getTransactionDenomAllowableValues();
-        if (!is_null($transaction_denom) && !in_array($transaction_denom, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'transaction_denom', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($transaction_denom) && !in_array($transaction_denom, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'transaction_denom', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['transaction_denom'] = $transaction_denom;
 
         return $this;
@@ -773,14 +773,14 @@ class PaymentRefundOperations implements ModelInterface, ArrayAccess
     public function setTransactionCode($transaction_code)
     {
         $allowedValues = $this->getTransactionCodeAllowableValues();
-        if (!is_null($transaction_code) && !in_array($transaction_code, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'transaction_code', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($transaction_code) && !in_array($transaction_code, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'transaction_code', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['transaction_code'] = $transaction_code;
 
         return $this;
@@ -806,14 +806,14 @@ class PaymentRefundOperations implements ModelInterface, ArrayAccess
     public function setTerminalId($terminal_id)
     {
         $allowedValues = $this->getTerminalIdAllowableValues();
-        if (!is_null($terminal_id) && !in_array($terminal_id, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'terminal_id', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($terminal_id) && !in_array($terminal_id, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'terminal_id', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['terminal_id'] = $terminal_id;
 
         return $this;
@@ -839,14 +839,14 @@ class PaymentRefundOperations implements ModelInterface, ArrayAccess
     public function setInvoiceNumber($invoice_number)
     {
         $allowedValues = $this->getInvoiceNumberAllowableValues();
-        if (!is_null($invoice_number) && !in_array($invoice_number, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'invoice_number', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($invoice_number) && !in_array($invoice_number, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'invoice_number', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['invoice_number'] = $invoice_number;
 
         return $this;
@@ -872,14 +872,14 @@ class PaymentRefundOperations implements ModelInterface, ArrayAccess
     public function setUsername($username)
     {
         $allowedValues = $this->getUsernameAllowableValues();
-        if (!is_null($username) && !in_array($username, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'username', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($username) && !in_array($username, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'username', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['username'] = $username;
 
         return $this;
@@ -905,14 +905,14 @@ class PaymentRefundOperations implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $allowedValues = $this->getNameAllowableValues();
-        if (!is_null($name) && !in_array($name, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'name', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($name) && !in_array($name, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'name', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['name'] = $name;
 
         return $this;
@@ -938,14 +938,14 @@ class PaymentRefundOperations implements ModelInterface, ArrayAccess
     public function setLastname($lastname)
     {
         $allowedValues = $this->getLastnameAllowableValues();
-        if (!is_null($lastname) && !in_array($lastname, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'lastname', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($lastname) && !in_array($lastname, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'lastname', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['lastname'] = $lastname;
 
         return $this;
@@ -971,14 +971,14 @@ class PaymentRefundOperations implements ModelInterface, ArrayAccess
     public function setAvatar($avatar)
     {
         $allowedValues = $this->getAvatarAllowableValues();
-        if (!is_null($avatar) && !in_array($avatar, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'avatar', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($avatar) && !in_array($avatar, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'avatar', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['avatar'] = $avatar;
 
         return $this;

@@ -240,29 +240,29 @@ class LinksSchema implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        $allowedValues = $this->getRelAllowableValues();
-        if (!is_null($this->container['rel']) && !in_array($this->container['rel'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'rel', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getMethodAllowableValues();
-        if (!is_null($this->container['method']) && !in_array($this->container['method'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'method', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
-
-        $allowedValues = $this->getHrefAllowableValues();
-        if (!is_null($this->container['href']) && !in_array($this->container['href'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value for 'href', must be one of '%s'",
-                implode("', '", $allowedValues)
-            );
-        }
+//        $allowedValues = $this->getRelAllowableValues();
+//        if (!is_null($this->container['rel']) && !in_array($this->container['rel'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'rel', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getMethodAllowableValues();
+//        if (!is_null($this->container['method']) && !in_array($this->container['method'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'method', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
+//
+//        $allowedValues = $this->getHrefAllowableValues();
+//        if (!is_null($this->container['href']) && !in_array($this->container['href'], $allowedValues, true)) {
+//            $invalidProperties[] = sprintf(
+//                "invalid value for 'href', must be one of '%s'",
+//                implode("', '", $allowedValues)
+//            );
+//        }
 
         return $invalidProperties;
     }
@@ -299,14 +299,14 @@ class LinksSchema implements ModelInterface, ArrayAccess
     public function setRel($rel)
     {
         $allowedValues = $this->getRelAllowableValues();
-        if (!is_null($rel) && !in_array($rel, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'rel', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($rel) && !in_array($rel, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'rel', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['rel'] = $rel;
 
         return $this;
@@ -332,14 +332,14 @@ class LinksSchema implements ModelInterface, ArrayAccess
     public function setMethod($method)
     {
         $allowedValues = $this->getMethodAllowableValues();
-        if (!is_null($method) && !in_array($method, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'method', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($method) && !in_array($method, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'method', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['method'] = $method;
 
         return $this;
@@ -365,14 +365,14 @@ class LinksSchema implements ModelInterface, ArrayAccess
     public function setHref($href)
     {
         $allowedValues = $this->getHrefAllowableValues();
-        if (!is_null($href) && !in_array($href, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value for 'href', must be one of '%s'",
-                    implode("', '", $allowedValues)
-                )
-            );
-        }
+//        if (!is_null($href) && !in_array($href, $allowedValues, true)) {
+//            throw new \InvalidArgumentException(
+//                sprintf(
+//                    "Invalid value for 'href', must be one of '%s'",
+//                    implode("', '", $allowedValues)
+//                )
+//            );
+//        }
         $this->container['href'] = $href;
 
         return $this;
